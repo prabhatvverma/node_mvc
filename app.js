@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.set('view engine', 'pug');
-app.use(express.static(path.join(__dirname, 'views')));
+// app.use(express.static(path.join(__dirname, 'views')));
 app.set('views','./views/users');
 
 // app.use('/', indexRouter);
@@ -48,6 +48,9 @@ app.get('/create', function (req, res,next) {
 app.get('/index', function(req,res,next){
 res.render("index");
 });
+app.get('/employedata', function(req,res,next){
+    res.render("employedata");
+    });
 module.exports = app;
 
 app.listen(3000, function () {
